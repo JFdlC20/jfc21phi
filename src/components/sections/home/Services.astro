@@ -1,9 +1,11 @@
 ---
+// components
 import Container from "../../elements/Container.astro";
 import Heading from "../../elements/Heading.astro";
-import Dropdown from "../../items/Dropdown.astro";
-import Text from "../../elements/Text.astro";
+import Dropdown from "../../elements/Dropdown.astro";
+import ContainerBottom from "../../elements/ContainerBottom.astro";
 
+// content
 const services = [
     { 
         title: "Web Design",
@@ -26,11 +28,15 @@ const services = [
 
 <Container variant={'md'}>
     <Heading tagName="h2" tagSize="h2" class="text-center">Services</Heading>
-    <Container class="flex flex-col gap-4 p-6 border-3 border-base-900">
-        {
-            services.map((service, index) => (
-                <Dropdown title=`${index + 1}. ${service.title}` text={service.text} />  
-            ))
-        }       
-    </Container>
+    <div class="flex flex-col gap-4">
+        <Container class="flex flex-col gap-4 p-6 border-3 border-base-900">
+            {
+                services.map((service, index) => (
+                    <Dropdown title=`${index + 1}. ${service.title}` text={service.text} />  
+                ))
+            }       
+        </Container>
+        <ContainerBottom />    
+    </div>
+
 </Container>

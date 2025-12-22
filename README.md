@@ -2,7 +2,7 @@
 
 ## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+Inside of your template, you'll see the following folders and files:
 
 ```text
 /
@@ -10,14 +10,67 @@ Inside of your Astro project, you'll see the following folders and files:
 │   └── favicon.svg
 ├── src
 │   ├── assets
-│   │   └── astro.svg
+│   │   └── images
+│   │   └── ui
+│   │   └── work-card
 │   ├── components
-│   │   └── Welcome.astro
+│   │   ├── elements     # elements that can be used across the website
+│   │   │   └── Container.astro
+│   │   │   └── ContainerBottom.astro
+│   │   │   └── Heading.astro
+│   │   │   └── ImageContainer.astro
+│   │   │   └── Link.astro
+│   │   │   └── Text.astro
+│   │   │   └── Dropdown.astro
+│   │   │   └── ResumeDropdown.astro
+│   │   │   └── Work.astro
+│   │   ├── global       # elements used on very page
+│   │   │   └── BaseHead.astro
+│   │   │   └── Footer.astro
+│   │   │   └── Navigation.astro
+│   │   │   └── Wrapper.astro
+│   │   ├── sections    # components used on each section of each page
+│   │   │   └── about
+│   │   │   │   └── Education.astro 
+│   │   │   │   └── Experience.astro 
+│   │   │   │   └── Intro.astro 
+│   │   │   ├── contact
+│   │   │   │   └── ContactDetails.astro 
+│   │   │   │   └── ContactItem.astro 
+│   │   │   │   └── Intro.astro 
+│   │   │   ├── home
+│   │   │   │   └── About.astro 
+│   │   │   │   └── Faq.astro 
+│   │   │   │   └── Hero.astro 
+│   │   │   │   └── SelectedWorks.astro 
+│   │   │   │   └── Services.astro 
+│   │   │   ├── works
+│   │   │   │   └── Pagination.astro 
+│   │   │   │   └── Works.astro
+│   ├── components
+│   │   ├── images
+│   │   │   └── (folders for each post - add your project images here)
+│   │   └── project-title.md
+│   │   └── (add your projects here)
 │   ├── layouts
 │   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+│   ├── pages
+│   │   └── works
+│   │   │   └── [...page].astro
+│   │   │   └── [page].astro
+│   │   └── index.astro
+│   │   └── 404.astro
+│   │   └── about.astro
+│   │   └── contact.astro
+│   ├── styles
+│   │   └── global.css  # global styling and tailwind theme configuration
+│   │   └── markdown.css  # markdown files styling
+│   └── content.config.ts
+└── .gitignore
+└── astro.config.ts
+└── package-lock.json
+└── README.md
+└── tsconfig.json
 ```
 
 

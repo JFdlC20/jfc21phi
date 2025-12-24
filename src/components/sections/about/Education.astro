@@ -8,22 +8,28 @@ import ContainerBottom from "../../elements/ContainerBottom.astro";
 // content
 const education = [
     { 
-        title: "Bachelor of Fine Arts in Graphic Design",
-        place: "California College of the Arts",
-        period: "2013 - 2017",
-        text: "Concentrated in visual communication and digital design with coursework in typography, color theory, user experience, and brand strategy."
+        title: "Grado Superior en Marketing y Publicidad",
+        place: "CEU Andalucía",
+        period: "2025 - 2027",
+        text: "Después de mi experiencia propia realizando marketing orgánico en redes sociales enfocado en el e-commerce decidí expandir mis conocimientos en el sector."
     },
     { 
-        title: "UX Design Bootcamp Certificate",
-        place: "General Assembly",
-        period: "2018",
-        text: "Intensive 12-week program covering user research methodologies, information architecture, prototyping, and usability testing."
+        title: "Grado en Física (NF)",
+        place: "UNED - Universidad de Córdoba - Università Luigi Vanvitelli",
+        period: "2019-2020, 2021-2023",
+        text: "Estudios sin finalizar, pero que aportaron un alto nivel de conocimiento y un cambio en la forma de pensar, además de ganar experiencia en idiomas al realizar el programa Erasmus en las ciudades de Caserta-Nápoles."
+    },
+    { 
+        title: "Grado en Química (NF)",
+        place: "Universidad de Sevilla",
+        period: "2020-2021",
+        text: "Buscando el porqué de las cosas y ganando conocimientos en las ciencias naturales, gran experiencia en los laboratorios."
     }
 ]
 ---
 
 <Container variant={'md'}>
-    <Heading tagName="h2" tagSize="h2" class="text-center">Education</Heading>
+    <Heading tagName="h2" tagSize="h2" class="text-center">Educación</Heading>
     <div class="flex flex-col gap-4">
         <Container class="flex flex-col gap-4 p-6 border-3 border-base-900">
             {
@@ -34,5 +40,6 @@ const education = [
         </Container>
         <ContainerBottom /> 
     </div>
+    
     
 </Container>

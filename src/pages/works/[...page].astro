@@ -13,7 +13,7 @@ import type { GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
 export const getStaticPaths = (async ({paginate}) => {
     const works = await getCollection("works", ({data}) => !data.isDraft)
-    return paginate(works, {pageSize: 6});
+    return paginate(works, {pageSize: 4});
 }) satisfies GetStaticPaths;
 
 // props

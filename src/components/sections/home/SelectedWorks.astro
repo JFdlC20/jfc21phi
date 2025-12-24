@@ -8,12 +8,15 @@ import Link from "../../elements/Link.astro";
 // content collections
 import { getCollection } from "astro:content";
 const works = await getCollection("works");
-const featuredWorks = works.filter(work => work.data.isFeatured === true);
+const featuredWorks = works
+    .filter(work => work.data.isFeatured === true)
+    .sort((a, b) => (a.data.order || 99) - (b.data.order || 99))
+    .slice(0, 4);
 ---
 
 <Container variant={'lg'} class="items-center">
     <Heading tagName="h2" tagSize="h2" class="text-center">
-        Featured Works
+        Proyectos destacados
     </Heading>
     <Container class="grid lg:grid-cols-2 grid-cols-1 gap-16">
         {featuredWorks.map((work) => (
@@ -27,5 +30,5 @@ const featuredWorks = works.filter(work => work.data.isFeatured === true);
         ))
         }
     </Container>
-    <Link variant={'button'} href="/works">All Works</Link>
+    <Link variant={'button'} href="/works">Conoce más</Link>
 </Container>

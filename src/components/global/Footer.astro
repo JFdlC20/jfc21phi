@@ -5,17 +5,19 @@ import Heading from "../elements/Heading.astro";
 import Text from "../elements/Text.astro";
 import Link from "../elements/Link.astro";
 
+const base = import.meta.env.BASE_URL === '/' ? '' : import.meta.env.BASE_URL;
+
 // links
 const socials = [
     { title: "Linkedin", href: "https://www.linkedin.com/in/jesús-fuentes-de-la-cruz-a3941b1a5" },
     { title: "Instagram", href: "https://instagram.com/jfc21phi" },
 ];
 
-const navigation = [
-    { title: "Inicio", href: "/" },
-    { title: "Trabajos", href: "/works" },
-    { title: "Sobre mí", href: "/about" },
-    { title: "Contacto", href: "/contact" }
+const navLinks = [
+    { title: "Inicio", href: `${base}/` },
+    { title: "Trabajos", href: `${base}/works` },
+    { title: "Sobre mí", href: `${base}/about` },
+    { title: "Contacto", href: `${base}/contact` }
 ]
 ---
 

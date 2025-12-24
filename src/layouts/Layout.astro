@@ -9,12 +9,10 @@ import NavBar from "../components/global/Navigation.astro";
 import Footer from "../components/global/Footer.astro";
 
 // assets
-// 1. HEMOS QUITADO LOS IMPORTS DE @FONTSOURCE QUE DABAN ERROR
-
+import '@fontsource/road-rage';
+import '@fontsource-variable/jetbrains-mono';
 import bg from "../assets/images/bg.jpg";
 import { getImage } from "astro:assets";
-
-// Optimizamos la imagen de fondo
 const backgroundImage = await getImage({src: bg, format:'jpg'})
 
 // props
@@ -24,21 +22,10 @@ const { title } = Astro.props;
 <!doctype html>
 <html lang="en" class="scroll-smooth">
 	<BaseHead pageTitle={title}/>
-	
-	<style is:global>
-		@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&family=Road+Rage&display=swap');
-		
-		/* Aseguramos que el CSS sepa qué fuentes son */
-		:root {
-			--font-grunge: 'Road Rage', system-ui;
-			--font-mono: 'JetBrains Mono', monospace;
-		}
-	</style>
-
-	<body style={`background-image: url('${backgroundImage.src}')`} class="bg-cover bg-center bg-no-repeat bg-fixed box-border">
-		
+	<body style=`background-image: url(${backgroundImage.src})` class="bg-cover bg-center bg-no-repeat bg-fixed  box-border">
+		<!-- Background noise effect -->
 		<div class="noise-[67,22,25] fixed inset-0 pointer-events-none"></div>
-		
+		<!-- Wrapper component to make sure all content on the website is above the noise filter background -->
 		<Wrapper>
 			<NavBar />
 			<main class="flex flex-col xl:gap-48 lg:gap-40 gap-28">
@@ -48,3 +35,5 @@ const { title } = Astro.props;
 		</Wrapper>
 	</body>
 </html>
+
+

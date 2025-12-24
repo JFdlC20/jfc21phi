@@ -1,12 +1,16 @@
+// @ts-check
 import { defineConfig } from 'astro/config';
-// ... tus otros imports
+
+import tailwindcss from '@tailwindcss/vite';
+
+import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  // 1. Tu dominio base de GitHub
+  vite: {
+    plugins: [tailwindcss()]
+  },
+  integrations: [sitemap()],
+
   site: 'https://jfdlc20.github.io',
-
-  // 2. IMPORTANTE: El nombre de tu repositorio con barra delante
   base: '/jfc21phi',
-
-  // ... el resto de tu configuración
 });

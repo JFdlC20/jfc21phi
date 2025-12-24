@@ -37,7 +37,8 @@ const navLinks = [
             <Heading tagName="h3" tagSize="h4" class="text-base-900 mb-5">Navegación</Heading>
             <ul>
                 {
-                    navigation.map((navLink) => (
+                    /* AQUÍ ESTABA EL ERROR: Cambiado navigation por navLinks */
+                    navLinks.map((navLink) => (
                         <li><Link variant={'nav'} href={navLink.href}>{navLink.title}</Link></li>
                     ))
                 }

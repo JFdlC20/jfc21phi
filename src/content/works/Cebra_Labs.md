@@ -13,7 +13,7 @@ liveSite: "https://www.instagram.com/cebra.labs/#"
 description: "Proyecto personal con mi amigo Darío para realizar el branding de una futura marca de ropa en el sector de la automoción."
 isFeatured: true
 isDraft: false
-order: 1
+order: 2
 ---
 
 En estos primeros meses del proyecto hemos realizado algunos bocetos e ideas de cómo enfocar una marca de ropa cercana a los más fieles seguidores del deporte del motor, realizando pequeños vídeos promocionales y diseños de camisetas que nos gustaría lanzar próximamente.

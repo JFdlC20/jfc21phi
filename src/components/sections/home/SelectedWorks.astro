@@ -8,6 +8,7 @@ import Link from "../../elements/Link.astro";
 // content collections
 import { getCollection } from "astro:content";
 const works = await getCollection("works");
+const base = import.meta.env.BASE_URL === '/' ? '' : import.meta.env.BASE_URL;
 const featuredWorks = works
     .filter(work => work.data.isFeatured === true)
     .sort((a, b) => (a.data.order || 99) - (b.data.order || 99))
@@ -30,5 +31,5 @@ const featuredWorks = works
         ))
         }
     </Container>
-    <Link variant={'button'} href={'/works'}> Conoce más</Link>
+    <Link variant={'button'} href={`${base}/works`}> Conoce más</Link>
 </Container>

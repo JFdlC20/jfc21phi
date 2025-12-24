@@ -21,7 +21,7 @@ const { page } = Astro.props;
 ---
 
 <Layout title=`Works - Page ${page.currentPage}`>
-    <Heading tagName="h1" tagSize="h1" class="text-center">Works</Heading>
+    <Heading tagName="h1" tagSize="h1" class="text-center">Todos los Proyectos</Heading>
     <Container variant={'lg'}>
         <Container class="grid lg:grid-cols-2 grid-cols-1 gap-24">
             {page.data.map((work) => (
@@ -36,8 +36,8 @@ const { page } = Astro.props;
             }
         </Container>
          <div class="flex flex-row gap-2">
-            <Pagination prev={page.url.prev ? import.meta.env.BASE_URL + page.url.prev : null}></Pagination>
-            <Pagination next={page.url.next ? import.meta.env.BASE_URL + page.url.next : null}></Pagination>
+            <Pagination prev={page.url.prev}></Pagination>
+            <Pagination next={page.url.next}></Pagination>
         </div>
     </Container>
     
